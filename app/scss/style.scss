@@ -30,6 +30,7 @@ body {
 
 .header {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -144,6 +145,16 @@ body {
 
 .content {
     padding-top: 20px;
+    font-family: 'Roboto Thin', sans-serif;
+    font-weight: 100;
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+    }
 
     &__news {
         background: #234884;
@@ -168,22 +179,19 @@ body {
 
 .footer {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
 
     &__left {
         display: flex;
         justify-content: flex-start;
+        flex-direction: column;
         flex-grow: 1;
         &--info {
-            display: inline-flex;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
         }
 
@@ -192,11 +200,44 @@ body {
             justify-content: flex-end;
             width: 100%;
             padding-top: 20px;
-justify-content: center;
-flex-grow: 1;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        &--text {
+            flex-grow: 3;
+        }
+
+        &--user {
+            flex-direction: row;
+        }
+    }
+    &__rigth {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        &__logo,
+        &__social,
+        &__language,
+        &__date,
+        &__map {
+            margin-top: 20px;
+        }
+
+        &__map {
+            justify-content: center;
         }
     }
 }
+
 
 // .footer {
 //     position: absolute;
@@ -243,4 +284,3 @@ flex-grow: 1;
 //     &__img {
 //         margin-left: 20px;
 //     }
-// }
