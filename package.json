@@ -17,7 +17,7 @@
     "bootstrap": "^3.3.7"
   },
   "repository": {
-  "type": "git",
-  "url": "git://github.com/savchenkot/expo.git"
+    "type": "git",
+    "url": "git://github.com/savchenkot/expo.git"
   }
 }
